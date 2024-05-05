@@ -4,6 +4,7 @@ import Image from "next/image";
 import { projectShortList } from "../_data/projects";
 import ProjectCard from "./_components/projects/ProjectCard";
 import Link from "next/link";
+import Hero from "./_components/landing/Hero";
 
 export const metadata : Metadata = {
     title: "Valero Saiz | Home",
@@ -11,18 +12,10 @@ export const metadata : Metadata = {
 }
 
 export default function Home() {
+
     return (
         <>
-        <header className="text-center bg-stone-950 mb-8">
-            <div className="relative w-full h-full min-h-80">
-                <div className="bg-gradient-to-t from-stone-700 to-stone-950 absolute w-full top-0 left-0 h-full bg-no-repeat bg-cover"/>
-                <div className="bg-[url('/render11.png')] absolute w-full top-0 left-0 h-full saturate-100 bg-no-repeat bg-cover bg-center opacity-30"/>
-                <div className="absolute w-full h-full flex flex-col gap-1 items-center justify-center">
-                    <h1 className="font-body text-5xl">valero saiz</h1>
-                    <h3>3D ARTIST</h3>
-                </div>
-            </div>
-        </header>
+        <Hero/>
         <Section title="about me">
             <div className="flex flex-col md:flex-row gap-4 items-center">
                 <div className="flex aspect-square rounded-md overflow-hidden border-2 border-stone-700">
@@ -40,7 +33,7 @@ export default function Home() {
             </div>
         </Section>
         <Section title="some projects">
-            <div className="flex flex-col items-center md:flex-row md:items-start gap-2 mb-4">{ 
+            <div className="flex flex-col items-center md:flex-row md:items-start md:justify-center gap-2 mb-4">{ 
                     projectShortList.map((project, index) => {
                         const { title, subtitle, img, href } = project
                         return (
