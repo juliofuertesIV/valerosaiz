@@ -13,6 +13,9 @@ const config: Config = {
         body: ['var(--font-body)'],
         subtitle: ['var(--font-subtitle)']
       },
+      colors: {
+        "accent": "#d25b5b"
+      }
     },
   },
   plugins: [],
