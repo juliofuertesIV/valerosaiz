@@ -1,7 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+/* 
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -15,8 +15,8 @@
     --background-end-rgb: 0, 0, 0;
   }
 }
-
-body {
+ */
+/* body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
       to bottom,
@@ -24,6 +24,29 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+}
+ */
+h1, h2 {
+  @apply font-display
+}
+
+h1 {
+  @apply text-5xl
+}
+h2 {
+  @apply text-4xl
+}
+
+h3 {
+  @apply text-3xl
+}
+
+h4 {
+  @apply text-2xl
+}
+
+h3, h4 {
+  @apply font-subtitle
 }
 
 @layer utilities {
